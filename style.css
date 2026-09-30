@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* memastikan padding dan border masuk dalam total ukuran elemen */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;  /* Mengatur tata letak header menggunakan Flexbox */
+    justify-content: space-between; /* Menempatkan elemen di sisi kiri dan kanan dengan ruang di antaranya */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    padding: 20px 10%; /* Memberikan ruang di dalam elemen, 20px atas-bawah dan 10% kiri-kanan */
+    background-color: rgba(8, 9, 22, 0.8);
+    color: #fff;
+    width: 100%;
+    z-index: 10;
+}
+
+header .logo h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+}
+
+header nav ul {
+    list-style: none; /* Menghapus tanda bullet pada list */
+    display: flex; /* Menyusun elemen list secara horizontal */
+    gap: 20px; /* Memberikan jarak antar item sebesar 20px */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s; /* Menambahkan efek transisi pada perubahan warna latar */
+}
+
+header nav ul li a:hover {
+    background-color: #0056b3; /* Memberikan warna biru tua saat di-hover */
+    border-radius: 5px;
+}
+
+header .btn-book {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+header .btn-book:hover {
+    background-color: #00408a; /* Warna latar biru lebih gelap saat di-hover */
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('desaponggok.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.603); /* Overlay dengan warna putih transparan */
+    z-index: 1; /* Menempatkan overlay di bawah teks */
+}
+
+.hero-section h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    z-index: 2;
+    position: relative;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(35, 78, 187, 0.5);
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 8px;
+    z-index: 2;
+    position: relative;
+    max-width: 2000px;
+    line-height: 1.5;
+}
+
+.hero-section .btn-discover {
+    padding: 12px 30px;
+    background-color: #0056b3;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 7px;
+    z-index: 2;
+    position: relative;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero-section .btn-discover:hover {
+    background-color: #00408a;
+    transform: scale(1.05);
+}
+
+main img {
+    max-width: 50%;
+    min-width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #262a30;
+}
+
+section p {
+    font-size: 18px;
+    color: #201f1f;
+    line-height: 1.8;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 10%;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 5%;
+    }
+    
+    .hero-section h2 {
+        font-size: 36px;
+    }
+    
+    .hero-section p {
+        font-size: 16px;
+    }
+    
+    section h2 {
+        font-size: 28px;
+    }
+    
+    section p {
+        font-size: 14px;
+    }
+}
+
+.dropdown {
+    position: relative; /* Mengatur elemen dropdown sebagai elemen induk dengan posisi relatif */
+    display: inline-block; /* Menampilkan dropdown sebagai elemen inline tetapi tetap bisa diberi block-level properti */
+}
+
+.dropdown-content {
+    display: none; /* Secara default, isi dropdown tidak ditampilkan */
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px; /* Lebar minimum konten dropdown */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Memastikan dropdown muncul di atas elemen lainnya */
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none; /* Menghapus garis bawah pada link */
+    display: block; /* Menampilkan link sebagai block untuk mengisi seluruh lebar dropdown */
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd; /* Memberikan warna abu-abu terang saat link di-hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Menampilkan isi dropdown saat pengguna mengarahkan mouse ke elemen induk */
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #0056b3; /* Memberikan warna biru tua pada tombol dropdown saat di-hover */
+    border-radius: 5px; /* Membuat sudut tombol dropdown menjadi melengkung */
+}
+
+.slider-container {
+    position: relative; /* Elemen slider diatur relatif agar tombol navigasi dapat diposisikan relatif terhadapnya */
+    width: 80%; /* Lebar slider diatur 80% dari lebar elemen induk */
+    margin: 0 auto; /* Memusatkan slider secara horizontal */
+    overflow: hidden; /* Menyembunyikan konten di luar area slider */
+    display: flex; /* Menyusun elemen dalam slider secara horizontal */
+    align-items: center;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+.slider {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: calc(100% * 5);
+}
+
+.slide {
+    min-width: 50%; 
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.splide__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 1rem;
+  }

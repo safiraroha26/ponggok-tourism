@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Ponggok</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Ponggok</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="sejarah.html">Sejarah</a></li>
+                <li><a href="penginapan.html">Penginapan</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li class="dropdown">
+                    <a href="wisata.html" class="dropbtn">Wisata</a>
+                    <div class="dropdown-content">
+                        <a href="umbulbesuki.html">Umbul Besuki</a>
+                        <a href="umbulponggok.html">Umbul Ponggok</a>
+                        <a href="umbulsigedang.html">Umbul Sigedang</a>
+                        <a href="thehonduras.html">The Honduras</a>
+                        <a href="sokoalas.html">Soko Alas</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gallery-section">
+        <h2>Galeri Desa Ponggok</h2>
+        <div class="splide" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="./desaponggok.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="./umbulponggok.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="./umbulbesuki.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="./umbulsigedang.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="./honduras.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="./sokoalas.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="./reddoorz.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="./hpandu.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="./mamihome.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="./btirto.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="./kadespo.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="./kolampo.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="./soko2.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="./umbpong.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Desa Wisata Ponggok. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var splide = new Splide('.splide', {
+                type: 'loop',
+                perPage: 3,
+                perMove: 1,
+            });
+
+            splide.mount();
+        });
+    </script>
+</body>
+
+</html>
